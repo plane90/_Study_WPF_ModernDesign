@@ -1,0 +1,24 @@
+﻿<Application x:Class="_Study_WPF_ModernDesign.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:_Study_WPF_ModernDesign"
+             xmlns:viewModel="clr-namespace:_Study_WPF_ModernDesign.MVM.ViewModel"
+             xmlns:view="clr-namespace:_Study_WPF_ModernDesign.MVM.View"
+             StartupUri="MainWindow.xaml">
+    <!--Theme을 StaticResource로써 참조 가능하도록 키값을 ResourceDictionary에 저장한다-->
+    <!--에러가 사라지지 않으면 'Ctrl + Shift + B'를 눌러 솔루션 빌드 실행-->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="/Theme/TextboxTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:DiscoveryViewModel}">
+                <view:DiscoveryView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
