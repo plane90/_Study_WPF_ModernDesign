@@ -3,6 +3,7 @@
     <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
            TargetType="{x:Type RadioButton}"
            x:Key="MenuButtonTheme">
+        <!--BasedOn="{StaticResource {x:Type ToggleButton}}: 참조 대상을 선언한다. "이 페이지에는 BasedOn을 선언했음에도 실제 참조하고 있지 않다" e.g. <Button Style="{StaticResource ToggleButton.Style}">-->
         <!--TargetType="{x:Type RadioButton}: StaticResource를 Style로 적용할 수 있는 컨트롤 타입이다. e.g.<RadioButton Style="{StaticResource MenuButtonTheme}"/>-->
         <!--x:Key="MenuButtonTheme": ResourceDictionary의 key 이름이다. key 이름으로 StaticResource로써 참조 가능하다. e.g.{StaticResource MenuButtonTheme} -->
         <Style.Setters>
