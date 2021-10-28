@@ -9,7 +9,7 @@
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>
-                    <!--ControlTemplate: DependancyProperty를 바꾸는 작업이다. ControlTemplate이 정의되어야만 Style.Triggers가 동작한다. -->
+                    <!--ControlTemplate: DependancyProperty를 바꾸는 작업이다. ControlTemplate이 정의되어야만 Style.Triggers가 동작한다. cf. https://oksujay1127.tistory.com/88 -->
                     <!--TargetType="RadioButton": RadioButton 클래스의 프로퍼티를 참조함-->
                     <ControlTemplate TargetType="RadioButton">
                         <Grid VerticalAlignment="Stretch"
