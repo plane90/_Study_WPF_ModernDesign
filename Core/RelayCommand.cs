@@ -8,17 +8,20 @@ namespace _Study_WPF_ModernDesign.Core
         private Action<object> _execute;
         private Func<object, bool> _canExecute;
 
+        // ICommand
         public event EventHandler CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }
             remove { CommandManager.RequerySuggested -= value; }
         }
 
+        // ICommand
         public bool CanExecute(object parameter)
         {
             return _canExecute == null || _canExecute(parameter);
         }
 
+        // ICommand
         public void Execute(object parameter)
         {
             _execute(parameter);

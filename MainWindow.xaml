@@ -10,7 +10,8 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        StateChanged="OnWindowStateChanged">
 
     <Window.DataContext>
         <!--viewModel은 <Window>에서 xmlns로 선언된 변수명이다-->
@@ -26,11 +27,61 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="75"/>
+                <RowDefinition Height="35"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Elysian"
+
+            <!--value of Span = length (o), index(x)-->
+            <Border Grid.Column="1"
+                    Grid.RowSpan="2"
+                    Background="#373547"/>
+
+            <ListBox Name="ListBoxTitle"
+                     Grid.Row="0"
+                     Grid.ColumnSpan="2"
+                     Background="Transparent"
+                     BorderBrush="Transparent"
+                     MouseDown="MainWindow_MouseLeftButtonDown"/>
+
+            <StackPanel Grid.Column="1"
+                Orientation="Horizontal"
+                HorizontalAlignment="Right">
+                <Button Name="BtnMinimalize"
+                    Width="30"
+                    Margin="5"
+                    Click="OnClick_BtnMinimalize"
+                    Background="#272537"
+                    Content="-"
+                    FontSize="20"
+                    Foreground="White"/>
+                <Button Name="BtnNormalize"
+                    Width="30"
+                    Margin="5"
+                    Click="OnClick_BtnNormalize"
+                    Background="#272537"
+                    Content="▣"
+                    VerticalContentAlignment="Center"
+                    Foreground="White"/>
+                <Button Name="BtnMaximize"
+                    Width="30"
+                    Margin="5"
+                    Click="OnClick_BtnMaximize"
+                    Background="#272537"
+                    Content="□"
+                    VerticalContentAlignment="Center"
+                    Foreground="White"/>
+                <Button Name="BtnClose"
+                    Width="30"
+                    Margin="5"
+                    Click="OnClick_BtnClose"
+                    Background="#272537"
+                    Content="X"
+                    Foreground="White"/>
+
+            </StackPanel>
+
+            <TextBlock Text="Hololens Logger"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Left"
                    Foreground="White"
@@ -71,6 +122,34 @@
                             Grid.Column="1"
                             Margin="10"
                             Content="{Binding CurrentView}"/>
+
+            <Separator 
+                VerticalAlignment="Bottom">
+                <Separator.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF00001E" Offset="0"/>
+                        <GradientStop Color="#00000000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Separator.Background>
+                <Separator.RenderTransform>
+                    <ScaleTransform ScaleY="8"/>
+                </Separator.RenderTransform>
+            </Separator>
+
+            <Separator Grid.Column="1"
+                VerticalAlignment="Bottom">
+                <Separator.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF242442" Offset="0"/>
+                        <GradientStop Color="#00000000" Offset="0.95"/>
+                        <GradientStop Color="#83121222" Offset="0.324"/>
+                    </LinearGradientBrush>
+                </Separator.Background>
+                <Separator.RenderTransform>
+                    <ScaleTransform ScaleY="8"/>
+                </Separator.RenderTransform>
+            </Separator>
+
 
         </Grid>
 
