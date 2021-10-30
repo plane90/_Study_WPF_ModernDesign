@@ -37,12 +37,14 @@ namespace _Study_WPF_ModernDesign.Core
         }
 
         // ICommand
+        // e.g. UI 버튼 활성화/비활성화 여부 결정 "내부적으로 자동호출됨"
         public bool CanExecute(object parameter)
         {
             return _canExecute == null || _canExecute(parameter);
         }
 
         // ICommand
+        // e.g. UI 버튼의 Click Event 처리
         public void Execute(object parameter)
         {
             _execute(parameter);
