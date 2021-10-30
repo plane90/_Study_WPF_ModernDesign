@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 namespace _Study_WPF_ModernDesign.Core
 {
     // INotifyPropertyChanged: UI Update - Binding에 쓰임
-    class ObservableObject : INotifyPropertyChanged
+    abstract class ObservableObject : INotifyPropertyChanged
     {
         // INotifyPropertyChanged
         // delegate PropertyChangedEventHandler(object sender, PropertyChangedEventArgs e);
