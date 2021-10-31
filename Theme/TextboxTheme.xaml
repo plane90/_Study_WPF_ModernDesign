@@ -10,7 +10,7 @@
                     <Border CornerRadius="10"
                             Background="#252330"
                             Width="200" Height="40">
-
+                        <!--Border는 Child 속성 하나만 정의 가능하다. 그래서 Grid layout이 필요.-->
                         <Grid>
                             <Rectangle StrokeThickness="1"/>
                             <TextBox Margin="1"
