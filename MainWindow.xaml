@@ -14,7 +14,6 @@
         StateChanged="OnWindowStateChanged">
 
     <Window.DataContext>
-        <!--viewModel은 <Window>에서 xmlns로 선언된 변수명이다-->
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
@@ -81,7 +80,7 @@
 
             </StackPanel>
 
-            <TextBlock Text="Hololens Logger"
+            <TextBlock Text="Elycian"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Left"
                    Foreground="White"
