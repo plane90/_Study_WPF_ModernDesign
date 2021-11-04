@@ -7,10 +7,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="MVM\View\DiscoveryView.xaml.cs">
+    <Compile Update="MVVM\View\DiscoveryView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVM\View\HomeView.xaml.cs">
+    <Compile Update="MVVM\View\HomeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -18,10 +18,13 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVM\View\DiscoveryView.xaml">
+    <Page Update="MVVM\View\DiscoveryView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVM\View\HomeView.xaml">
+    <Page Update="MVVM\View\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\BandingColorListboxItemTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Theme\MenuButtonTheme.xaml">
