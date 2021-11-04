@@ -78,6 +78,22 @@
                     Content="X"
                     Foreground="White"/>
 
+                <!-- 개별 Style 설정하는 방법
+                <RadioButton Content="HomeView" Command="{Binding HomeViewCommand}" IsChecked="True">
+                -->
+                <!-- 트리거는 RadioButton의 속성만 참조할 수 있다. ViewModel은 불가능하다-->
+                <!--
+                <RadioButton.Style>
+                    <Style TargetType="RadioButton">
+                        <Style.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Background" Value="Orange"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </RadioButton.Style>
+                </RadioButton>
+                -->
             </StackPanel>
 
             <TextBlock Text="Elycian"
