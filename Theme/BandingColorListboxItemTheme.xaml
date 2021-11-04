@@ -1,5 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--google keyword: wpf listbox background banding color check pattern-->
+    <!--https://www.c-sharpcorner.com/uploadfile/dpatra/alternate-row-color-in-listbox-in-wpf/-->
     <Style TargetType="{x:Type ListBoxItem}">
         <Style.Triggers>
             <Trigger Property="ItemsControl.AlternationIndex" Value="0">
